@@ -1,4 +1,4 @@
-package proxy;
+package proxy.loader;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package proxy;
+package proxy.loader;
 
 import javassist.ClassPool;
 import javassist.CtClass;

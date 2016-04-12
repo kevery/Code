@@ -1,14 +1,14 @@
-package proxy.TicketAgency.impl;
+package proxy.ticketAgency.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import proxy.TicketAgency.TicketService;
+import proxy.ticketAgency.TicketService;
 
 /**
  * @author hxt
  */
-public class TicketServiceImpl implements TicketService {
-    private Logger logger = LogManager.getLogger(TicketServiceImpl.class);
+public class Station implements TicketService {
+    private Logger logger = LogManager.getLogger(Station.class);
 
     @Override
     public void sellTicket() {

@@ -1,4 +1,4 @@
-package proxy.TicketAgency;
+package proxy.ticketAgency;
 
 /**
  * Created by hxt on 2016/4/6.
