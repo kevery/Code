@@ -22,13 +22,13 @@ public class ProxyTest {
 
     @Test
     public void testDynamic() throws Exception {
-//        TicketService station = new Station();
-//        InvocationHandler invocationHandler = new InvocationHandlerImpl(station);
-//        TicketService stationProxy = (TicketService) Proxy.newProxyInstance(invocationHandler.getClass().getClassLoader(), station.getClass().getInterfaces(), invocationHandler);
-//        System.out.println(stationProxy.getClass().getName());
-//        stationProxy.sellTicket();
-//        ClassLoader classLoader = invocationHandler.getClass().getClassLoader();
-//        System.out.println(classLoader);
+        TicketService station = new Station();
+        InvocationHandler invocationHandler = new InvocationHandlerImpl(station);
+        TicketService stationProxy = (TicketService) Proxy.newProxyInstance(invocationHandler.getClass().getClassLoader(), station.getClass().getInterfaces(), invocationHandler);
+        System.out.println(stationProxy.getClass().getName());
+        stationProxy.sellTicket();
+        ClassLoader classLoader = invocationHandler.getClass().getClassLoader();
+        System.out.println(classLoader);
 
     }
 }
