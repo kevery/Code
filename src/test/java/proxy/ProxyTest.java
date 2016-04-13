@@ -1,7 +1,11 @@
 package proxy;
 
 import org.junit.Test;
-import proxy.dynamicProxy.InvocationHandlerImpl;
+import proxy.dynamicProxy.one.one.InvocationHandlerImpl;
+import proxy.dynamicProxy.one.one.Subject;
+import proxy.dynamicProxy.one.one.SubjectImpl;
+import proxy.dynamicProxy.one.two.AlarmDoor;
+import proxy.dynamicProxy.one.two.ProxyUtil;
 import proxy.ticketAgency.StationProxy;
 import proxy.ticketAgency.TicketService;
 import proxy.ticketAgency.impl.Station;
@@ -30,5 +34,24 @@ public class ProxyTest {
         ClassLoader classLoader = invocationHandler.getClass().getClassLoader();
         System.out.println(classLoader);
 
+    }
+
+    @Test
+    public void testSub() throws Exception {
+        Subject subject = new SubjectImpl();
+//        subject.search();
+        InvocationHandler invocationHandler = new InvocationHandlerImpl(subject);
+        Subject subjectProxy = (Subject)Proxy.newProxyInstance(subject.getClass().getClassLoader(), subject.getClass().getInterfaces(), invocationHandler);
+        subjectProxy.search();
+
+    }
+
+    @Test
+    public void testGetClass() throws Exception {
+        AlarmDoor alarmDoor = new AlarmDoor();
+//        ClassLoader classLoader = alarmDoor.getClass().getClassLoader();
+//        Class<?>[] interfaces = alarmDoor.getClass().getInterfaces();
+//        InvocationHandler invocationHandler = new InvocationHandlerImpl(alarmDoor);
+        ProxyUtil.generateClassFile(alarmDoor.getClass(),"alertP");
     }
 }

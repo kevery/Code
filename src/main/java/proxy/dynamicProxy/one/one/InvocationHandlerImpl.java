@@ -1,4 +1,4 @@
-package proxy.dynamicProxy;
+package proxy.dynamicProxy.one.one;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -15,7 +15,7 @@ public class InvocationHandlerImpl implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("代理开始");
+        System.out.println("代理开始21");
         method.invoke(object, args);
         return null;
     }
