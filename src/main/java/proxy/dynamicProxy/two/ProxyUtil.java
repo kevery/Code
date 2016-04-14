@@ -1,4 +1,4 @@
-package proxy.dynamicProxy.one.two;
+package proxy.dynamicProxy.two;
 
 import sun.misc.ProxyGenerator;
 

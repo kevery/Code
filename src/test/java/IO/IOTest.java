@@ -40,7 +40,8 @@ public class IOTest {
 
     @Test
     public void testClassLoader() throws Exception {
-
+        File file = new File("2.txt");
+        file.createNewFile();
     }
 
 }

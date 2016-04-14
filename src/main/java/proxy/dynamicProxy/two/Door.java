@@ -1,4 +1,4 @@
-package proxy.dynamicProxy.one.two;
+package proxy.dynamicProxy.two;
 
 /**
  * Created by kever on 16/4/12.
